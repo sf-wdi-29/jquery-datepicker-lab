@@ -10,15 +10,26 @@ $("#datepicker").datepicker();
 var resultString = "";
 
 function daysLeft() {
-    var a = $( "#datepicker" ).datepicker('getDate').getTime();
+    var a = $("#datepicker").datepicker('getDate').getTime();
     var b = today.getTime();
-    var c = 24*60*60*1000;
-    var diffDays = Math.round((a - b)/c);
+    var c = 24 * 60 * 60 * 1000;
+    var diffDays = Math.floor((a - b) / c) + 1;
 
-    resultString = ("<p>You have " + diffDays + " days left!");
+    if (diffDays == 1) {
+        resultString = ("<p> That's tomorrow! You've only got one day left. </p>")
+    } else if (diffDays == 0) {
+        resultString = ("<p>Wait, that's today! </p>")
+    } else if (diffDays < 0) {
+        resultString = ("<p>You missed it. That was " + diffDays * -1 + " days ago...</p>")
+    } else {
+        resultString = ("<p>You have " + diffDays + " days left! </p>");
+    }
+
 }
 
-$("#datepicker").on("change", function(){
+
+
+$("#datepicker").on("change", function() {
     daysLeft();
     $("#result").html(resultString);
 });
@@ -26,7 +37,7 @@ $("#datepicker").on("change", function(){
 
 // 16. STRETCH Challenges:
 
-// For the highly ambitious, you may write a couple if statements and customize the result HTML string accordingly.
+// For the highly ambitious, you may write a couple if statements and customize the resulting HTML string accordingly.
 // Here are the possibilities I've thought of; there may be more.
 // condition 1:  there is an input but someone has selected a date in the past
 // condition 2:  there is an input and the day is tomorrow
