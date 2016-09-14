@@ -4,6 +4,8 @@ var m_names = new Array("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", 
 var curr_date = today.getDate();
 var curr_month = today.getMonth();
 var curr_year = today.getFullYear();
+var waitingFor = $("input.endDate").html();
+var noInputMessage = "Please enter information above";
 
 $("#todayDate").html(m_names[curr_month] + ". " + curr_date + ", " + curr_year);
 $("#datepicker").datepicker();
@@ -19,8 +21,14 @@ function daysLeft() {
 }
 
 $("#datepicker").on("change", function(){
-    daysLeft();
-    $("#result").html(resultString);
+	daysLeft();
+
+	if(waitingFor !== null) {
+		$("#result").html(resultString);
+	}
+    if(waitingFor == null) {
+    	$("#result").html(noInputMessage);
+	}
 });
 
 
