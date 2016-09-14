@@ -8,14 +8,36 @@ var curr_year = today.getFullYear();
 $("#todayDate").html(m_names[curr_month] + ". " + curr_date + ", " + curr_year);
 $("#datepicker").datepicker();
 var resultString = "";
+var userInput;
 
 function daysLeft() {
     var a = $( "#datepicker" ).datepicker('getDate').getTime();
     var b = today.getTime();
     var c = 24*60*60*1000;
     var diffDays = Math.round((a - b)/c);
-
-    resultString = ("<p>You have " + diffDays + " days left!");
+    userInput= $(".endDate").val();
+    if(userInput) {
+    	if(diffDays<0) {
+    		resultString = "Please enter a date in the future.";
+    	}
+    	else if (diffDays==0) {
+    		resultString = "Yay! "+userInput+" is tomorrow!";
+    	}
+    	else {
+    		resultString = ("<p>You have " + diffDays + " days left until "+userInput);
+    	}
+    }
+    else {
+    	if(diffDays<0) {
+    		resultString = "Please enter a date in the future.";
+    	}
+    	else if (diffDays==0) {
+    		resultString = "Yay! You only have to wait until tomorrow!";
+    	}
+    	else {
+    		resultString = ("<p>You have " + diffDays + " days left!");
+    	}
+    }
 }
 
 $("#datepicker").on("change", function(){
