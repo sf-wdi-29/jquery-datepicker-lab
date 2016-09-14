@@ -34,6 +34,3 @@ $("#datepicker").on("change", function(){
 // condition 4:  there is NO input but someone has selected a date in the past
 // condition 5:  there is NO input and the day is tomorrow
 // condition 6:  there is NO input and the date is in the future.
-
-
-
