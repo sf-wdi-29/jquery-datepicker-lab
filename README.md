@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!-- 
 title: More jQuery with Datepicker
 type: lesson
@@ -32,6 +33,10 @@ Open `index.html` in your browser and follow the instructions in `script.js`. Fr
 
 If you get stuck, ask for help, or move on to the next step. The focus is on understanding what is happening at each step, not on trying to understand everything at first glance.
 
+=======
+# jquery-datepicker-lab
+You are on the branch `step-5`. Follow the instructions in `script.js`. Replace the underlined comments (`// ____`) with real code. When you are ready, add and commit your work and then check out the next branch:  `git checkout step-6-stretch`
+>>>>>>> step-5
 
 ### Additional Resources:
 
@@ -40,8 +45,11 @@ If you get stuck, ask for help, or move on to the next step. The focus is on und
 - [MDN Array Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
 - [MDN String Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
 
+<<<<<<< HEAD
 
 
 ## Licensing
 All content is licensed under a CC­BY­NC­SA 4.0 license.
 All software code is licensed under GNU GPLv3. For commercial use or alternative licensing, please contact legal@ga.co.
+=======
+>>>>>>> step-5
