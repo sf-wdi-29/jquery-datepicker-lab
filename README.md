@@ -5,6 +5,9 @@ duration: "1:25"
 creator:
     name: Ben Hulan
     city: SF
+adapted by:
+    name: Zeb Girouard
+    city: DEN
 competencies: Front-end intro
  -->
 
@@ -13,22 +16,24 @@ competencies: Front-end intro
 ### Objectives
 *After this lesson, students will be able to:*
 
-- Build a deceptively simple single-input form and calendar interface
-- Conceptualize the process of coding a ui element to meet specific design requirements
+- **Build** a deceptively simple single-input form and calendar interface
+- **Conceptualize** the process of coding a ui element to meet specific design requirements
 
 ### Preparation
 *Before this lesson, students should already be able to:*
 
-- Write basic HTML/CSS
-- Read and write basic vanilla Javascript
-- Read and write basic jQuery
+- **Write** basic HTML/CSS
+- **Read** and **write** basic vanilla Javascript
+- **Read** and **write** basic jQuery
 
 ## Instructions:
 This lab will take you through a series of exercises intended to illustrate the thought process about how to develop code based on a complex technical requirement. You will be provided a series of challenges, each of which builds on what you did in the last one. The files are located on separate branches of this project.
 
 Please fork and clone this repo in your local dev environment. _(Note: Do not send pull requests when code is designed to live on separate branches.)_
 
-Open `index.html` in your browser and follow the instructions in `script.js`. From the terminal, type `git checkout step-1`. Each version of the script file contains detailed instructions about how to proceed through the exercises.
+From the terminal, type `git checkout step-1`. Each version of the script file contains detailed instructions about how to proceed through the exercises. Open `index.html` in your browser and follow the instructions in `script.js`. 
+
+When you are ready to move on to the next step, checkout the next step (step-2, step-3, ..., step-6-stretch, step-7), open `index.html` in your browser, and follow the instructions for that step in `script.js`.
 
 If you get stuck, ask for help, or move on to the next step. The focus is on understanding what is happening at each step, not on trying to understand everything at first glance.
 
